@@ -1,0 +1,4 @@
+### Purpose
+This project is intended to be a "hands-on" learning experience while I try to learn the Rust programming language. All code is written by me, but I am using Google Gemini's "Guided Learning" AI tool to help walk me through concepts as I develop the project.
+
+The goal for this project is not to be the most efficient code. Rather, I am just trying to get a "first look" at Rust. I want to make sure that I understand the syntax, flow, and best practices. This means that there is a lot of hand holding and explaining from Gemini. I hope that this project will lay the ground-work for future projects where I can develop good Rust code quickly.
