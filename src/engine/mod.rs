@@ -1,3 +1,4 @@
+#[derive(Debug, PartialEq)]
 pub enum Operator {
     Add,
     Subtract,
@@ -5,6 +6,7 @@ pub enum Operator {
     Divide
 }
 
+#[derive(Debug, PartialEq)]
 pub struct Calculation {
     pub left_operand: i32,
     pub operator: Operator,
@@ -57,3 +59,6 @@ pub fn parse(input: &str) -> Result<Calculation, String> {
 
     Ok(calculation)
 }
+
+#[cfg(test)]
+mod tests;
