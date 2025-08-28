@@ -78,6 +78,22 @@ pub fn parse(input: &str) -> Result<Calculation, String> {
     Ok(calculation)
 }
 
+fn evaluate(calculation: &Calculation) -> Result<i32, String> {
+    match calculation.operator {
+        Operator::Add => Ok(calculation.left_operand + calculation.right_operand),
+        Operator::Subtract => Ok(calculation.left_operand - calculation.right_operand),
+        Operator::Multiply => Ok(calculation.left_operand * calculation.right_operand),
+        Operator::Divide => {
+            if calculation.right_operand == 0 {
+                Err(String::from("Cannot divide a number by zero"))
+            } else {
+                Ok(calculation.left_operand / calculation.right_operand)
+            }
+
+        }
+    }
+}
+
 // The #[cfg(test)] attribute tells Rust to only compile this module (tests) when testing.
 #[cfg(test)]
 mod tests;
