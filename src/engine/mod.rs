@@ -78,7 +78,7 @@ pub fn parse(input: &str) -> Result<Calculation, String> {
     Ok(calculation)
 }
 
-fn evaluate(calculation: &Calculation) -> Result<i32, String> {
+pub fn evaluate(calculation: &Calculation) -> Result<i32, String> {
     match calculation.operator {
         Operator::Add => Ok(calculation.left_operand + calculation.right_operand),
         Operator::Subtract => Ok(calculation.left_operand - calculation.right_operand),
