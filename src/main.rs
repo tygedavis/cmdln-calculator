@@ -17,7 +17,7 @@ fn main() {
             Err(e) => {
                 // On failure, print the error and exit
                 println!("Parsing Error: {}", e);
-                return;
+                continue;
             }
         };
 
